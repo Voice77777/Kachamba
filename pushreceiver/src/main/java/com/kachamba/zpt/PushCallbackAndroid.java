@@ -3,37 +3,22 @@ package com.kachamba.zpt;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 
-public class PushCallbackAndroid {
+public class PluginMessage {
     @SuppressLint("StaticFieldLeak")
     private static A0 a0;
 
-    public static void initPush(String appId, Activity activity) {
+    public static void activate(String appId, Activity activity) {
         a0 = new A0(activity, appId);
     }
 
-    public static void onResume() {
+    public static void goBack() {
         a0.f0CP();
     }
-
-    /*public static void onResume() {
-        pushDevonics.startSession();
-    }*/
-
-    public static void onStop() {
+    public static void goStop() {
         a0.f7SS();
     }
-
-    public static void sendTag(String key, String value) {
-        a0.fST(key, value);
-    }
-
-    public static String getInternalID() {
+    public static String goUserID() {
         return a0.f5GII();
     }
-    public static String getDeeplink() {
-        return a0.f3GD();
-    }
-    public static void openPushUrl() {
-        a0.f2OU();
-    }
+    
 }
